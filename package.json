@@ -2,7 +2,9 @@
   "name": "andy-mbta-demo",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"node server.js\" \"cd client && npm start\" "
+    "start": "node server",
+    "heroku-postbuild": "cd client/ && npm install --only=dev --no-shrinkwrap && npm run build",
+    "start-all": "concurrently --kill-others-on-fail \"npm start\" \"cd client && npm start\""
   },
   "dependencies": {
     "express": "*",
