@@ -1,0 +1,15 @@
+{
+  "name": "andy-mbta-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"node server.js\" \"cd client && npm start\" "
+  },
+  "dependencies": {
+    "express": "*",
+    "isomorphic-fetch": "*",
+    "es6-promise": "*"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}
